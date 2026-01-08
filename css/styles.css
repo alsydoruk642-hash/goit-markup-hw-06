@@ -12,7 +12,7 @@
   --white: #fff;
   --dairy: #fcfcfc;
 }
-/* Загальні налаштування стилів */
+/* #region Загальні налаштування стилів */
 .container {
   max-width: 1158px;
   padding-left: 15px;
@@ -65,7 +65,8 @@ body {
   line-height: 1.5;
   background-color: var(--white);
 }
-/* Header Navigation Styles   */
+/* #endregion Загальні налаштування стилів */
+/* #region Header Navigation Styles   */
 .header {
   border-bottom: 1px solid var(--cornflower);
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
@@ -157,9 +158,9 @@ body {
 .header-address-contacts:focus {
   color: #404bbf;
 }
+/* #endregion Header Navigation Styles   */
 
-/* Main Page Styles */
-/*section hero */
+/* #region section hero */
 .hero {
   background: var(--grey);
   background-image: linear-gradient(
@@ -214,7 +215,8 @@ body {
 .button-hero:focus {
   background-color: #404bbf;
 }
-/*section feature */
+/* #endregion section hero */
+/* #region section feature */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -264,7 +266,8 @@ body {
   border: 1px solid var(--light-slate);
   gap: 8px;
 }
-/*team cards */
+/* #endregion section feature */
+/* #region team cards */
 .team-cards {
   background-color: var(--cloud);
 }
@@ -348,8 +351,9 @@ body {
 .team-social-icon {
   fill: #f4f4fd;
 }
+/* #endregion team cards */
 
-/*section projects */
+/* #region section projects */
 .projects-list-unordered {
   display: flex;
   gap: 48px 24px;
@@ -423,8 +427,9 @@ body {
   /*text-align: center;*/
   color: var(--slate);
 }
+/* #endregion section projects */
 
-/* Footer Styles */
+/* #region Footer Styles */
 .footer {
   background-color: var(--navy-blue);
   padding: 100px 0;
@@ -566,7 +571,8 @@ body {
 .footer-sub-button:focus {
   background: var(--green);
 }
-/* Modal-Ovelay Styles */
+/* #endregion Footer Styles */
+/* #region Modal-Ovelay Styles */
 .modal-overlay {
   display: flex;
   position: fixed;
@@ -785,3 +791,4 @@ textarea.modal-input {
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* #endregion Modal-Ovelay Styles */

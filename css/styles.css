@@ -14,10 +14,23 @@
 }
 /* #region Загальні налаштування стилів */
 .container {
-  max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+  }
 }
 .section {
   padding-top: 120px;
@@ -55,6 +68,8 @@ address {
   font-style: normal;
 }
 img {
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 

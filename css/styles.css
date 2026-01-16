@@ -24,11 +24,12 @@
     max-width: 768px;
   }
 }
+
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin: 0 auto;
   }
 }
@@ -49,9 +50,8 @@ p {
 
 ul {
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -81,25 +81,20 @@ body {
   background-color: var(--white);
 }
 /* #endregion Загальні налаштування стилів */
-/* #region Header Navigation Styles   */
+/* #region Header Navigation Styles Mobile */
 .header {
   border-bottom: 1px solid var(--cornflower);
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
-  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: var(--white);
 }
 .header .container {
   display: flex;
   align-items: center;
-}
-.header-nav {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-}
-.header-nav-unordered {
-  display: flex;
-  gap: 40px;
+  justify-content: space-between;
 }
 
 .header-nav-logo-web {
@@ -110,7 +105,6 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--iris);
-  margin-right: 76px;
 }
 .header-nav-logo-studio {
   font-family: "Raleway", sans-serif;
@@ -121,59 +115,124 @@ body {
   text-transform: uppercase;
   color: var(--navy-blue);
 }
-.header-nav-link {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--navy-blue);
-  display: inline-block;
-  padding: 24px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.header-nav {
 }
-.current {
-  color: var(--ocean);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-}
-.current::after {
-  content: "";
-  position: absolute;
-  border-radius: 2px;
-  height: 4px;
-  width: 100%;
-  background-color: var(--ocean);
-  bottom: -1px;
-  left: 0;
-}
-.header-nav-link:hover,
-.header-nav-link:focus,
-.header-nav-link:active {
-  color: #404bbf;
+.header-nav-unordered {
+  display: none;
 }
 .header-address {
-  font-style: normal;
 }
 .header-address-unordered {
-  display: flex;
-  gap: 40px;
+  display: none;
+}
+.mobile-menu-btn {
+  background: transparent;
+  border: none;
 }
 
-.header-address-contacts {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--slate);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+/* #endregion Header Navigation Styles Mobile */
+
+/* #region Header Navigation Styles Tablet */
+@media screen and (min-width: 768px) {
+  .header .container {
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .header-nav-logo-web {
+    margin-right: 120px;
+  }
+  .header-nav-unordered {
+    display: flex;
+    gap: 40px;
+    position: relative;
+  }
+  .header-nav-link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .current {
+    color: var(--ocean);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+  .current::after {
+    content: "";
+    position: absolute;
+    border-radius: 2px;
+    height: 4px;
+    width: 100%;
+    background-color: var(--ocean);
+    bottom: -1px;
+    left: 0;
+  }
+  .header-nav-link:hover,
+  .header-nav-link:focus,
+  .header-nav-link:active {
+    color: #404bbf;
+  }
+  .header-address {
+    font-style: normal;
+  }
+  .header-address-unordered {
+    display: block;
+    gap: 12px;
+  }
+  .mobile-menu-btn {
+    display: none;
+  }
 }
-.header-address-contacts:hover,
-.header-address-contacts:focus {
-  color: #404bbf;
+
+/* #endregion Header Navigation Styles Tablet */
+/* #region Header Navigation Styles Desktop   */
+@media screen and (min-width: 1158px) {
+  .header .container {
+    display: flex;
+    align-items: center;
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .header-nav-logo-web {
+    margin-right: 76px;
+  }
+
+  .header-address {
+    font-style: normal;
+  }
+  .header-address-unordered {
+    display: flex;
+    gap: 40px;
+  }
+
+  .header-address-contacts {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .header-address-contacts:hover,
+  .header-address-contacts:focus {
+    color: #404bbf;
+  }
 }
-/* #endregion Header Navigation Styles   */
+/* #endregion Header Navigation Styles Desktop   */
 
 /* #region section hero */
 .hero {
@@ -230,6 +289,7 @@ body {
 .button-hero:focus {
   background-color: #404bbf;
 }
+
 /* #endregion section hero */
 /* #region section feature */
 .visually-hidden {

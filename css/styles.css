@@ -81,11 +81,14 @@ body {
   background-color: var(--white);
 }
 /* #endregion Загальні налаштування стилів */
+
 /* #region Header Navigation Styles Mobile */
 .header {
   border-bottom: 1px solid var(--cornflower);
-  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+  box-shadow:
+    0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 2px 1px 0 rgba(46, 47, 66, 0.08);
   position: sticky;
   top: 0;
   z-index: 999;
@@ -128,10 +131,10 @@ body {
 .mobile-menu-btn {
   background: transparent;
   border: none;
+  padding: 0;
 }
 
 /* #endregion Header Navigation Styles Mobile */
-
 /* #region Header Navigation Styles Tablet */
 @media screen and (min-width: 768px) {
   .header .container {
@@ -139,15 +142,15 @@ body {
   .header-nav {
     display: flex;
     align-items: center;
-    flex-grow: 1;
   }
   .header-nav-logo-web {
+    padding: 24px 0;
     margin-right: 120px;
   }
   .header-nav-unordered {
     display: flex;
+    justify-content: center;
     gap: 40px;
-    position: relative;
   }
   .header-nav-link {
     font-family: "Roboto", sans-serif;
@@ -157,8 +160,7 @@ body {
     letter-spacing: 0.02em;
     color: var(--navy-blue);
     display: block;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px 0;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -234,13 +236,19 @@ body {
 }
 /* #endregion Header Navigation Styles Desktop   */
 
-/* #region section hero */
+/* #region section hero mobile */
+.hero {
+}
+/* #endregion section hero mobile */
+/* #region section hero tablet */
+.hero {
+}
+/* #endregion section hero tablet */
+/* #region section hero desktop */
 .hero {
   background: var(--grey);
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
+  background-image:
+    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url("../images/images-desk/people-office.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -290,7 +298,7 @@ body {
   background-color: #404bbf;
 }
 
-/* #endregion section hero */
+/* #endregion section hero desktop */
 /* #region section feature */
 .visually-hidden {
   position: absolute;
@@ -354,8 +362,10 @@ body {
   background-color: #ffffff;
   width: calc((100% - 3 * 24px) / 4);
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  box-shadow:
+    0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .team-cards-name-container {
   padding: 32px 16px;
@@ -437,8 +447,10 @@ body {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-list:hover {
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  box-shadow:
+    0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background: var(--white);
 }
 
@@ -662,7 +674,8 @@ body {
   /* сховати оврлей та актиність миші*/
   opacity: 0; /*0 - прихований, 1 - видимий*/
   pointer-events: none; /* none - неактивний, auto - активний*/
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   visibility: hidden;
 }
@@ -675,7 +688,9 @@ body {
   background-color: #ffffff;
   width: 408px;
   min-height: 584px;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+  box-shadow:
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   position: relative;
@@ -696,7 +711,8 @@ body {
   justify-content: center;
   padding: 0;
   background-color: #e7e9fc;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-button:hover,

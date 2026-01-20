@@ -119,6 +119,7 @@ body {
   color: var(--navy-blue);
 }
 .header-nav {
+  padding: 16px 0;
 }
 .header-nav-unordered {
   display: none;
@@ -142,6 +143,7 @@ body {
   .header-nav {
     display: flex;
     align-items: center;
+    padding: 0;
   }
   .header-nav-logo-web {
     padding: 24px 0;
@@ -207,6 +209,7 @@ body {
     display: flex;
     align-items: center;
     flex-grow: 1;
+    padding: 0;
   }
   .header-nav-logo-web {
     margin-right: 76px;
@@ -238,14 +241,6 @@ body {
 
 /* #region section hero mobile */
 .hero {
-}
-/* #endregion section hero mobile */
-/* #region section hero tablet */
-.hero {
-}
-/* #endregion section hero tablet */
-/* #region section hero desktop */
-.hero {
   background: var(--grey);
   background-image:
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -253,9 +248,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 188px 0;
-  max-width: 1440px;
   margin: 0 auto;
+  padding: 72px 0;
+  max-width: 1440px;
 }
 .hero .container {
   display: flex;
@@ -266,36 +261,59 @@ body {
 .hero-title {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 56px;
+  font-size: 36px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--white);
-  margin-bottom: 48px;
-  max-width: 496px;
+  margin-bottom: 72px;
+  max-width: 216px;
 }
-.button-hero {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: var(--white);
-  background-color: var(--iris);
-  border-radius: 4px;
-  min-width: 169px;
-  padding: 16px 32px;
-  gap: 10px;
+/* #endregion section hero mobile */
+/* #region section hero tablet */
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 112px 0;
+  }
+  .hero-title {
+    font-size: 56px;
+    max-width: 496px;
+    margin-bottom: 36px;
+  }
+}
+/* #endregion section hero tablet */
+/* #region section hero desktop */
+@media screen and (min-width: 1158px) {
+  .hero {
+    padding: 188px 0;
+  }
+  .hero-title {
+    margin-bottom: 36px;
+  }
 
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: var(--iris);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.button-hero:hover,
-.button-hero:focus {
-  background-color: #404bbf;
+  .button-hero {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    background-color: var(--iris);
+    border-radius: 4px;
+    min-width: 169px;
+    padding: 16px 32px;
+    gap: 10px;
+
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background: var(--iris);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .button-hero:hover,
+  .button-hero:focus {
+    background-color: #404bbf;
+  }
 }
 
 /* #endregion section hero desktop */

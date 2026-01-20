@@ -33,10 +33,6 @@
     margin: 0 auto;
   }
 }
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
 
 h1,
 h2,
@@ -316,7 +312,7 @@ body {
 
 /* #endregion section hero desktop */
 
-/* #region section feature */
+/* #region section feature mobile */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -331,42 +327,78 @@ body {
   overflow: hidden;
 }
 .feature-unordered {
-  display: flex;
-  gap: 24px;
+  display: column;
+  margin: 96px 0;
+  padding: 0 16px;
 }
-.feature-list {
-  width: calc((100% - 3 * 24px) / 4);
+.feature-icon-container {
+  display: none;
 }
 .feature-title-name {
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
   letter-spacing: 0.02em;
-  color: var(--navy-blue);
+  color: #2e2f42;
+  text-align: center;
   margin-bottom: 8px;
 }
-.feature-text {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--slate);
+.feature-list {
+  margin-bottom: 72px;
 }
-.feature-icon-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 8px;
-  background-color: var(--cloud);
-  width: 264px;
-  height: 112px;
-  border-radius: 4px;
-  align-items: center;
-  border: 1px solid var(--light-slate);
-  gap: 8px;
+/* #endregion section feature mobile */
+/* #region section feature tablet */
+@media screen and (min-width: 768px) {
+  .feature-icon-container {
+    display: none;
+  }
+  .feature-title-name {
+    text-align: start;
+  }
 }
-/* #endregion section feature */
+/* #endregion section feature tablet */
+/* #region section feature desktop */
+@media screen and (min-width: 1158px) {
+  .feature-unordered {
+    display: flex;
+    gap: 24px;
+    margin: 120px 0;
+  }
+  .feature-list {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+  .feature-title-name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+  }
+  .feature-text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate);
+  }
+  .feature-icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+    background-color: var(--cloud);
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    align-items: center;
+    border: 1px solid var(--light-slate);
+    gap: 8px;
+  }
+}
+/* #endregion section feature desktop */
+
 /* #region team cards */
 .team-cards {
   background-color: var(--cloud);

@@ -326,13 +326,17 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.feature-unordered {
-  display: column;
-  margin: 96px 0;
-  padding: 0 16px;
+.feature {
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .feature-icon-container {
   display: none;
+}
+.feature-unordered {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
 }
 .feature-title-name {
   font-family: "Roboto", sans-serif;
@@ -344,26 +348,40 @@ body {
   text-align: center;
   margin-bottom: 8px;
 }
-.feature-list {
-  margin-bottom: 72px;
+.feature-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
 }
 /* #endregion section feature mobile */
 /* #region section feature tablet */
 @media screen and (min-width: 768px) {
+  .feature-unordered {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
   .feature-icon-container {
     display: none;
   }
-  .feature-title-name {
-    text-align: start;
+  .feature-list {
+    width: calc((100% - 24px) / 2);
   }
 }
 /* #endregion section feature tablet */
 /* #region section feature desktop */
 @media screen and (min-width: 1158px) {
+  .feature {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
   .feature-unordered {
     display: flex;
     gap: 24px;
-    margin: 120px 0;
   }
   .feature-list {
     width: calc((100% - 3 * 24px) / 4);
@@ -377,12 +395,7 @@ body {
     color: var(--navy-blue);
   }
   .feature-text {
-    font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--slate);
   }
   .feature-icon-container {
     display: flex;
@@ -399,7 +412,11 @@ body {
 }
 /* #endregion section feature desktop */
 
-/* #region team cards */
+/* #region team cards mobile */
+/* #endregion team cards mobile */
+/* #region team cards tablet */
+/* #endregion team cards tablet */
+/* #region team cards desktop */
 .team-cards {
   background-color: var(--cloud);
 }
@@ -485,7 +502,7 @@ body {
 .team-social-icon {
   fill: #f4f4fd;
 }
-/* #endregion team cards */
+/* #endregion team cards desktop */
 /* #region section projects */
 .projects-list-unordered {
   display: flex;

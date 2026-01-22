@@ -444,6 +444,11 @@ body {
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
     0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
+.team-cards-list img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 .team-cards-name-container {
   padding: 32px 16px;

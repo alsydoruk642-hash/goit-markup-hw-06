@@ -894,15 +894,15 @@ body {
 } /* зробити оврлей видимим */
 .modal {
   background-color: #ffffff;
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
   box-shadow:
     0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   position: relative;
-  padding: 72px 24px 24px;
+  padding: 72px 16px 24px 16px;
   overflow: auto;
 }
 .modal-close-button {
@@ -1032,10 +1032,6 @@ textarea.modal-input {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--slate);
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 0;
 }
 .modal-span-container {
   border-radius: 2px;
@@ -1088,5 +1084,14 @@ textarea.modal-input {
   margin: 0 auto;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
+  .modal-accept-label {
+  }
 }
 /* #endregion Modal-Ovelay Styles */

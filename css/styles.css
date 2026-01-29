@@ -1018,9 +1018,6 @@ textarea.modal-input {
 .modal-accept-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: 8px;
   border-radius: 4px;
   margin-top: 16px;
   margin-bottom: 24px;
@@ -1041,7 +1038,7 @@ textarea.modal-input {
   margin-right: 8px;
   background-color: white;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
@@ -1062,6 +1059,7 @@ textarea.modal-input {
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: var(--iris);
+  display: block;
 }
 .modal-send-button {
   font-family: "Roboto", sans-serif;
@@ -1091,7 +1089,9 @@ textarea.modal-input {
     min-height: 584px;
     padding: 72px 24px 24px 24px;
   }
-  .modal-accept-label {
+  .privacy-policy-link {
+    display: inline;
+    margin-left: 0;
   }
 }
 /* #endregion Modal-Ovelay Styles */

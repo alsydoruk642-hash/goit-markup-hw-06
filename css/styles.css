@@ -1059,7 +1059,8 @@ textarea.modal-input {
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: var(--iris);
-  display: block;
+  display: inline;
+  white-space: nowrap;
 }
 .modal-send-button {
   font-family: "Roboto", sans-serif;
@@ -1090,7 +1091,6 @@ textarea.modal-input {
     padding: 72px 24px 24px 24px;
   }
   .privacy-policy-link {
-    display: inline;
     margin-left: 0;
   }
 }

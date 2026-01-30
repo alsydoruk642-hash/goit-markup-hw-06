@@ -1114,12 +1114,12 @@ textarea.modal-input {
     /* transform: translateY(-100%); */
 
     /* сховати оврлей та актиність миші*/
-    opacity: 1; /*0 - прихований, 1 - видимий*/
-    pointer-events: auto; /* none - неактивний, auto - активний*/
+    opacity: 0; /*0 - прихований, 1 - видимий*/
+    pointer-events: none; /* none - неактивний, auto - активний*/
     transition:
       opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    /* visibility: hidden; */
+    visibility: hidden;
   }
   .mobile-menu.open {
     opacity: 1;

@@ -241,7 +241,7 @@ body {
   background: var(--grey);
   background-image:
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url("../images/images-desk/people-office.jpg");
+    url("../images/people-office.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -287,6 +287,13 @@ body {
 .button-hero:hover,
 .button-hero:focus {
   background-color: #404bbf;
+}
+@media (min-resolution: 2x) {
+  .hero {
+    background-image:
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url("../images/people-office@2x.jpg");
+  }
 }
 /* #endregion section hero mobile */
 /* #region section hero tablet */

@@ -531,6 +531,9 @@ body {
 /* #endregion team cards mobile */
 /* #region team cards tablet */
 @media screen and (min-width: 768px) {
+  .team-cards .container {
+    width: 584px;
+  }
   .team-cards-unordered {
     display: flex;
     justify-content: center;
@@ -551,6 +554,10 @@ body {
     background-color: var(--cloud);
     padding-top: 120px;
     padding-bottom: 120px;
+  }
+  .team-cards .container {
+    width: 1158px;
+    margin: 0 auto;
   }
   .team-cards-unordered {
     display: flex;

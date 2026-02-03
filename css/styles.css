@@ -1007,12 +1007,12 @@ textarea.modal-input {
   fill: #2e2f42;
 }
 .modal-label {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--light-slate);
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgb(142, 143, 153);
   display: block;
 
   gap: 4px;
@@ -1036,6 +1036,14 @@ textarea.modal-input {
 }
 .modal-input-container:focus-within .modal-input-icon {
   fill: var(--iris);
+}
+.modal-input-comment:hover,
+.modal-input-comment:focus,
+.modal-input-comment:focus-visible,
+.modal-input-comment:active {
+  border: 1px solid var(--navy-blue-modal);
+  background-color: #ffffff;
+  outline: none;
 }
 .modal-accept-container {
   display: flex;
@@ -1143,7 +1151,7 @@ textarea.modal-input {
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     visibility: hidden;
   }
-  .mobile-menu.open {
+  .mobile-menu.is-open {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
